@@ -6,7 +6,10 @@
  * @returns {string} The given input splitted by words
  */
 function wrapWords(str, tmpl) {
-  return str.replace(/\b(\w+(?![^<>]*>))\b/g, tmpl || "<span>$&</span>");
+  return str.replace(
+    /\b(\w+(?![^<>]*>))\b|\b(\w[,.!"'?;:]+(?![^<>]*>))\b|\b([,.!"'?;:]\w+(?![^<>]*>))\b/g,
+    tmpl || "<span>$&</span>"
+  );
 }
 
 /**
@@ -65,5 +68,3 @@ let intersectionObserverCallback = (entries, observer) => {
   });
 };
 let observer = new IntersectionObserver(intersectionObserverCallback, options);
-
-textWipeInParts();

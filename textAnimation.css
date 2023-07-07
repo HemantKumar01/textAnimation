@@ -5,9 +5,9 @@
   margin: 0;
   padding: 0;
   font-size: inherit;
-  height: 1.5em;
+  height: 1.4em;
   overflow: hidden;
-  padding-top: 1.5em;
+  padding-top: 1.4em;
 }
 .text-wipe-in-parts-word-show {
   transition: padding-top 1s ease-in-out;
